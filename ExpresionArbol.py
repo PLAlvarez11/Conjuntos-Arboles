@@ -1,6 +1,13 @@
 import re
 import math
 
+# Definir la clase Nodo
+class Nodo:
+    def __init__(self, valor):
+        self.valor = valor
+        self.izquierdo = None
+        self.derecho = None
+
 # Función para verificar si un operador es válido
 def es_operador(c):
     return c in ['+', '-', '*', '/', '=']
@@ -69,30 +76,6 @@ def construir_arbol(postfija):
     # El árbol completo estará en la parte superior de la pila
     return stack.pop()
 
-# Función para imprimir el árbol con conexiones
-def imprimir_arbol_con_lineas(nodo, nivel=0, prefijo="Root: "):
-    if nodo is not None:
-        # Mostrar el valor del nodo con un prefijo que indica el nivel
-        print(" " * (nivel * 4) + prefijo + str(nodo.valor))
-        
-        # Si tiene hijos, imprimir los subárboles
-        if nodo.izquierdo is not None or nodo.derecho is not None:
-            if nodo.izquierdo is not None:
-                imprimir_arbol_con_lineas(nodo.izquierdo, nivel + 1, "L--- ")
-            else:
-                print(" " * ((nivel + 1) * 4) + "L--- None")
-            
-            if nodo.derecho is not None:
-                imprimir_arbol_con_lineas(nodo.derecho, nivel + 1, "R--- ")
-            else:
-                print(" " * ((nivel + 1) * 4) + "R--- None")
-
-# Definir la clase Nodo
-class Nodo:
-    def __init__(self, valor):
-        self.valor = valor
-        self.izquierdo = None
-        self.derecho = None
 
 # Metodo para validar la altura del nodo 
 def altura(nodo):
@@ -132,8 +115,6 @@ def imprimir_arbol(nodo):
     for nivel in range(1, h + 1):
         imprimir_nivel(nodo, 1, nivel, espacio_total)
         print()
-
-
 
 def convertir(expresion):
     postfija = infija_a_postfija(expresion)
