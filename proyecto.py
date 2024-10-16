@@ -9,4 +9,4 @@ import OperacionConjuntos
 expresion = input("Ingrese una Expresión Algebraica: ")
 ExpresionArbol.convertir(expresion)
 
-# SI ELIGE OPERACION DE CONJUNTOS LLAMAR A LOS METODOS PARA LA OPERACION CORRECTA
+# SI ELIGE OPERACION DE CONJUNTOS LLAMAR A LOS METODOS PARA LA OPERACION
