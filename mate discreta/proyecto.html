@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones de Conjuntos y Árbol Binario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Operaciones de Conjuntos y Expresiones Algebraicas</h1>
+        
+        <div class="input-section">
+            <label for="setA">Conjunto A (separado por comas):</label>
+            <input type="text" id="setA" placeholder="Ej: 1,2,3">
+            
+            <label for="setB">Conjunto B (separado por comas):</label>
+            <input type="text" id="setB" placeholder="Ej: 3,4,5">
+
+            <h3>Operaciones de Conjuntos:</h3>
+            <button onclick="performSetOperation('union')">Unión</button>
+            <button onclick="performSetOperation('intersection')">Intersección</button>
+            <button onclick="performSetOperation('difference')">Diferencia</button>
+
+            <p id="set-result"></p>
+        </div>
+
+        <div class="input-section">
+            <h3>Expresión Algebraica:</h3>
+            <label for="expression">Introduce la expresión:</label>
+            <input type="text" id="expression" placeholder="Ej: (A ∪ B) ∩ (A - B)">
+            <button onclick="evaluateExpression()">Evaluar</button>
+
+            <p id="expression-result"></p>
+        </div>
+
+        <div class="input-section">
+            <h3>Árbol Binario:</h3>
+            <p id="tree-result">Aquí se representará el árbol binario basado en las operaciones realizadas.</p>
+        </div>
+    </div>
+</body>
+</html>
